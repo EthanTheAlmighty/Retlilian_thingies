@@ -31,7 +31,8 @@ public class PolarBearChiefBehavior : MonoBehaviour
         Vector3 target = new Vector3(player.transform.position.x, mine.y, player.transform.position.z);
         Vector3 moveDir = target - mine;
         //moveDir.Normalize()  //The direction to travel in unit vector
-        transform.Translate(moveDir.Normalize() * speed)
+        moveDir.Normalize();
+        transform.Translate(moveDir * speed);
 
     }
 
