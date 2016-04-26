@@ -4,11 +4,10 @@ using System.Collections;
 public class PolarBearChiefBehavior : MonoBehaviour
 {
     public GameObject player;
-    public GameObject boulder;
     public bool damageTaken = false;
     bool charging = false;
 
-    public Animator bossAnimator;
+    Animator bossAnimator;
 
     int attack1Hash, attack2Hash, vunerabilityHash;
     int damage = 0;
@@ -19,6 +18,7 @@ public class PolarBearChiefBehavior : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        bossAnimator = this.GetComponent<Animator>();
         attack1Hash = Animator.StringToHash("Attack Pattern One");
         attack2Hash = Animator.StringToHash("Attack Pattern Two");
         vunerabilityHash = Animator.StringToHash("Vulnerability Period");
@@ -28,6 +28,7 @@ public class PolarBearChiefBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        //looking at you while not charging
         if(!charging)
             transform.LookAt(player.transform);
 

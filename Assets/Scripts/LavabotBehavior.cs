@@ -90,6 +90,7 @@ public class LavabotBehavior : MonoBehaviour
         yield return new WaitForSeconds(3);
     }
 
+    //this attack is an arm sweep, not sure how big right now
     IEnumerator AttackNumTwo()
     {
         yield return new WaitForSeconds(6);
