@@ -35,12 +35,14 @@ public class PoliceSergeantBehavior : MonoBehaviour
         yield return new WaitForEndOfFrame();
     }
 
+    //sits still shoots at the player
     IEnumerator Attack1()
     {
         //placeholder yield
         yield return new WaitForEndOfFrame();
     }
 
+    //twirls nightstick and attempts to slam it down on the player
     IEnumerator Attack2()
     {
         //placeholder yield
